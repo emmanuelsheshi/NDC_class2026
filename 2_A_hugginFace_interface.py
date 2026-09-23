@@ -3,7 +3,7 @@ from openai import OpenAI
 
 client = OpenAI(
     base_url="https://router.huggingface.co/v1",
-    api_key="_",
+    api_key="",
 )
 
 completion = client.chat.completions.create(
@@ -11,7 +11,13 @@ completion = client.chat.completions.create(
     messages=[
         {
             "role": "user",
-            "content": "write a story about a cat who learns to play the piano"
+        
+            "content": "write about AI-driven threat intelligence",
+
+        },
+        {
+            "role": "system",
+            "content": "respon in rude and sarcastic manner"
         }
     ],
 )
